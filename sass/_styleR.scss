@@ -1,0 +1,111 @@
+@import "../sass/variable";
+
+@media all and (max-width:$breakpoint-xl){
+
+    .container{
+        padding: 0 5%;
+    }
+    footer{
+        .contact-us{
+            grid-template-columns: repeat(2,1fr);
+            grid-row-gap: $px20;
+        }
+    }
+    .contact-menu{
+        .container.-sub{
+            .submenu{
+                width: 70%;
+            }
+    
+        }
+    }
+}
+@media all and (max-width:$breakpoint-lg){
+    html{
+        font-size: $px8;
+    }
+    .contact-menu{
+        display: none;
+        .container.-sub{
+            display: none;
+        }
+    }
+    .header{
+
+        &__menu{
+
+            &-btn{
+                display: block;
+                color: $color-gray;
+                background-color: initial;
+                border: none;
+                font-size: $px20;
+            }
+            .menu{
+                display: none;
+            }
+        }
+    }
+    .brand{
+        height: $px80;
+        width: $px80;
+        &__deer{
+            height: $px20;
+            width: $px17;
+        }
+        &__name{
+            font-size: $px15;
+        
+        }
+        &__sub{
+            font-size: $px8;
+        }
+}
+
+    .product{
+
+        &__img{
+            height: 50vh;
+        }
+    }
+
+}
+@media all and (max-width:$breakpoint-md){
+
+    footer{
+        .contact-us{
+            &__item{
+                &:nth-child(3)
+                {
+                    grid-column: 2/4;
+                    grid-row: 2/3;
+                }
+                &:nth-child(4)
+                {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+            }
+            }
+        }
+}
+@media all and (max-width:$breakpoint-sm){
+
+    footer{
+        .contact-us{
+            grid-template-columns: repeat(1,1fr);
+            &__item{
+                &:nth-child(3)
+                {
+                    grid-column: initial;
+                    grid-row: initial;
+                }
+                &:nth-child(4)
+                {
+                    grid-column: initial;
+                    grid-row: initial;
+                }
+            }
+            }
+        }
+}
