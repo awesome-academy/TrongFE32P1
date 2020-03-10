@@ -1,0 +1,170 @@
+@use 'mixin' as mx;
+@import 'variable';
+@include mx.setPoster();
+.poster{
+    &__img{
+        height: 41.55vh;
+    }
+}
+.product{
+    padding-top: $px40;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: $px30;
+    }
+    &__option{
+        font-size: $r-1-4;
+        color: $color-smokegrey;
+        line-height: 1.6;
+        
+    }
+    &__list{
+        margin-top: $px25;
+        li{
+            transition: all .7s ease;
+            &:hover{
+                color: $color-gold;
+                list-style: initial;
+                transform: translateX($px15);
+                
+            }
+        }
+    }
+    &__title{
+        text-transform: uppercase;
+        letter-spacing: $px3;
+        font-size: $r-1-4;
+        color: $color-black;
+    }
+    &__icon{
+        width: $px64;
+        height: $px10;
+        margin-top: $px5;
+        img{
+            object-fit: scale-down;
+        }
+    }
+    &__compare{
+        margin-top: $px38;
+        &-content{
+            margin-top: $px20;
+            font-size: $r-1-3;
+        }
+    }
+    &__tag{
+        margin-top: $px40;
+        &-list{
+            margin-top: $px30;
+
+        }
+        &-item{
+            margin-top: $px15;
+                span{
+                    padding: $px5 $px8;
+                    border: $px1 solid $color-border;
+                    &:nth-child(n+2){
+                        margin-left: $px5;
+                    }
+                    &:hover{
+                        color: $color-white;
+                        background-color: $color-gold;
+                        border: $px1 solid $color-gold;
+                    }
+                }
+            
+        }
+    }
+    &__advertisement{
+        margin-top: $px50;
+        margin-bottom: $px110;
+        &-img{
+            position: relative;
+            height: 74.65vh;
+            width: 17.12vw;
+            overflow: hidden;
+        }
+        &-under{
+                height: 27vh;
+                width: 100%;
+                position: absolute;
+                top:28%;
+                left: 0;
+        }
+        &-name{
+            font-size: $px34;
+            color: $color-white;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top:30%;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font-family: $sub-font;
+            font-weight: 100;
+        }
+        &-type{
+            font-size: $px105;
+            color: $color-white;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-63%);
+            top:35%;
+            text-transform: uppercase;
+        }
+        &-time{
+            font-size: 17.58px;
+            color: $color-white;
+            position: absolute;
+            left: 50%;
+            transform: translateX(135%);
+            top:41%;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font-family: $sub-font;
+            font-weight: 100;
+        }
+    }
+    &__display{
+        grid-column: 2/5;
+        text-align: center;
+        &-list{
+            margin-top: $px50;
+            
+        }
+        
+    }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        font-size: $r-1-8;
+        padding: $px10 0;
+        border: $px1 solid $color-border;
+        color: $color-gray;
+        &-icon{
+            i{
+                margin-left: $px20;
+                &:nth-child(1){
+                    color: $color-gold;
+                }
+            }
+        }
+        &-number{
+            margin-right: $px20;
+            span{
+                margin-left: $px3;
+                &:nth-child(1)
+                {
+                    margin-right: $px10;
+                }
+                &:nth-child(7){
+                    margin-left: $px8;
+                    
+                }
+                &:hover{
+                    color: $color-gold;
+                }
+            }
+        }
+    }
+}

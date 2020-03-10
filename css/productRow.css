@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+.productRow {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  text-align: left;
+}
+.productRow__item {
+  display: flex;
+  padding: 26px 0 43px 0;
+}
+.productRow__item:nth-child(-n+3) {
+  border-bottom: 1px solid #e7e7e7;
+}
+.productRow__item-img {
+  padding: 0 82px;
+  padding-top: 20px;
+}
+.productRow__item-img img {
+  height: 292px;
+  width: 92px;
+}
+.productRow__item-info {
+  width: 26.17vw;
+}
+.productRow__item-name {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.productRow__item-price {
+  position: relative;
+  font-size: 3.4rem;
+  color: #e6ae48;
+  display: inline;
+}
+.productRow__item-price span {
+  position: absolute;
+  font-size: 1.6rem;
+  top: 0;
+  left: 103%;
+}
+.productRow__item-content {
+  color: #959595;
+  margin-top: 18px;
+  font-size: 1.3rem;
+  line-height: 150%;
+}
+.productRow__item-btn {
+  display: flex;
+  margin-top: 27px;
+  align-items: center;
+}
+.productRow__item-btn button {
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+.productRow__item-btn button:hover {
+  background-color: #e6ae48;
+}
+.productRow__item-btn p {
+  color: #818181;
+  font-size: 1.4rem;
+  margin-left: 34px;
+}
+.productRow__item-btn p span {
+  margin-left: 8px;
+}
+
+.product__display-list {
+  margin-top: 10px;
+}
+.product__box-icon i:nth-child(1) {
+  color: #e6ae48;
+}
+.product__box-icon i:nth-child(2) {
+  color: #959595;
+}
+
+@media all and (max-width: 992px) {
+  .productRow__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .productRow__item-info {
+    width: 100%;
+  }
+  .productRow__item-btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+  }
+  .productRow__item-btn button {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 110px;
+    margin: 0 auto;
+  }
+  .productRow__item-btn p {
+    margin-left: initial;
+  }
+  .productRow__item-btn p:nth-child(2) {
+    text-align: right;
+  }
+  .productRow__item-btn p:nth-child(3) {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=productRow.css.map */
