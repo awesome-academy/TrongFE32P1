@@ -1,0 +1,148 @@
+@import "../sass/variable";
+
+@media all and (max-width:$breakpoint-2xl){
+    .block{
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            grid-row-gap: $px30;
+
+        }
+    }
+    .blog{
+        grid-column: initial;
+    }
+    .customer{
+        grid-column: initial;
+        &__content{
+            font-size: $r-2;
+        }
+        &__img{
+            height:$px200;
+            width: $px200;
+        }
+        &__name{
+            font-size: $r-2;
+        }
+        &__sub{
+            font-size: $r-1-7;
+        }
+        &__btn{
+            button{
+                height: $px10;
+                width: $px10;
+            }
+        }
+    }
+}
+
+@media all and (max-width:$breakpoint-xl){
+    .newpr{
+        
+        .newproduct__icon{
+            &.-right{
+                right: 2%;
+            }
+            &.-left{
+                left: 2%;
+            }
+        }
+    }
+    .supper{
+        .newproduct{
+            &__icon{
+                &.-right{
+                    right: 2%;
+                }
+                &.-left{
+                    left: 2%;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-lg){
+    .newproduct__icon{
+        display: none;
+    }
+    .newpr{
+        .newproduct{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .supper{
+        .newproduct{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    .product{
+        &__detail{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        &__img{
+            height: 50vh;
+            width: 100%;
+        }
+    }
+    
+}
+@media all and (max-width:$breakpoint-md){
+    .product{
+        &__detail{
+            grid-template-columns: repeat(2,1fr);
+            padding: $px96 $px20 $px154 $px20;
+        }
+        &__info{
+            width: 100%;
+            &-title{
+                font-size: $r-2;
+            }
+            &-price{
+                margin-top: $px10;
+            }
+            &-btn{
+                margin-top: $px13;
+            }
+            &-time{
+                margin-top: $px30;
+            }
+        }
+        
+    }
+    .gallery{
+        &__list{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .blog{
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+            grid-row-gap: $px30;
+        }
+    }
+}
+@media all and (max-width:$breakpoint-sm){
+    .product{
+        &__detail{
+            grid-template-columns: repeat(1,1fr);
+            padding: $px96 $px20 $px154 $px20;
+            grid-row-gap: $px30;
+        }
+    }
+    .gallery{
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    .newpr{
+        .newproduct{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    .supper{
+        .newproduct{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }   
+}

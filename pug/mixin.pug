@@ -1,0 +1,155 @@
+mixin brand
+    .brand 
+        img.brand__background(src="../img/brand.png" )
+        p.brand__name Wine hourse 
+        p.brand__sub since 1980 
+        img.brand__deer(src="../img/deer.png")
+mixin loadMenuSub(subMenu)
+    .submenu
+        each s,index in subMenu
+            if index>0
+                span -
+            p
+                a(href="#")
+                    label(for="modalEmail")=s
+    .contact-menu__search
+        input(type="text" placeholder="Tìm kiếm ở đây ...")  
+        i.fas.fa-search
+mixin loadMenu(menu,redWine)
+    .menu 
+        each m in menu
+            a(href="#")
+                span=m
+        .menu__description
+            each red,title in redWine
+                .menu__description-item 
+                    p.menu__description-title #{title}
+                        .menu__description-detail
+                            each r in red
+                                p=r
+            .menu__description-img
+                img(src="../img/des-1.jpg")
+mixin loadOurInfo(contacUs)
+    each contact,name in contacUs
+        .contact-us__item 
+            p.contact-us__item-title=name 
+            each c in contact
+                a(href="#")=c   
+    .contact-us__item
+        p.contact-us__item-title gửi email
+        p Gửi email cho chúng tôi để được hổ trợ
+        .contact-us__item-send
+            input(type="text" placeholder="Enter your email")
+            button Gửi
+        .contact-us__item-social 
+            a(href="#")
+                i.fab.fa-twitter 
+            a(href="#")
+                i.fab.fa-google-plus-g
+            a(href="#")
+                i.fab.fa-chrome 
+            a(href="#")
+                i.fab.fa-linkedin-in 
+            a(href="#")
+                i.fas.fa-wifi
+    .contact-us__item
+        p.contact-us__item-title liên hệ
+        p 
+            i.fas.fa-map-marker-alt
+            span Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+        p
+            i.fas.fa-phone-alt
+            span (04) 6674 2332 
+            span.contact-us__item-break -
+            i.fas.fa-phone-alt
+            span (04) 3786 8904
+        p
+            i.fas.fa-phone-alt
+            span (08) 6680 9686
+            i.fas.fa-envelope.contact-us__item-envelope
+            span.contact-us__item-email Support@bizweb.vn
+mixin loadProduct(product)
+    .newproduct 
+        each p in product
+            .newproduct__item 
+                .newproduct__img
+                    img(src=p.Img)
+                    if p.Type != ""
+                        if p.Type == "sale"
+                            .newproduct__img-type.-sale
+                                p=p.Type 
+                        else if p.Type == "hot"
+                            .newproduct__img-type.-hot
+                                p=p.Type 
+                        else 
+                            .newproduct__img-type.-moi
+                                p=p.Type 
+                    .newproduct__img-sub 
+                        .newproduct__img-sub-item
+                            p 
+                                i.fas.fa-heart
+                                span Yêu thích 
+                        .newproduct__img-sub-item
+                            p 
+                                i.fas.fa-signal
+                                span So sánh 
+                        .newproduct__img-sub-item
+                            p 
+                                i.fas.fa-compress-alt 
+                .newproduct__info 
+                    p.newproduct__info-name=p.Name
+                    p.newproduct__info-price
+                        span #{p.NewPrice}
+                            small đ 
+                        span -
+                        del  #{p.OldPrice}
+                            small đ
+                    button.newproduct__info-btn add to cart
+mixin loadGallery(gallery)
+    each g in gallery
+        .gallery__img 
+            img(src=g)
+            .gallery__brand
+                p.gallery__brand-time 1987
+                p.gallery__brand-name Rượu
+mixin loadBlog(blogs)
+    each b in blogs
+        .blog__item
+            .blog__item-img 
+                img(src=b.Img)
+                p
+                    i.fas.fa-link
+            p.blog__item-name= b.Name 
+            .blog__item-sub 
+                span.blog__item-author Đăng bởi #{b.Author}
+                span.blog__item-time=b.Time
+                span.blog__item-comment #{b.Comment} bình luận 
+            p.blog__item-content=b.Content 
+            a(href="#").blog__item-btn Read more
+mixin loadProductOption(totalRedWine)
+    .product__list
+        each total,name in totalRedWine
+            .product__item 
+                p.product__item-name=name 
+                ul 
+                    each t in total 
+                        li=t
+mixin loadProductRow(productRow)
+    .productRow
+        each p in productRow 
+            .productRow__item 
+                .productRow__item-img 
+                    img(src=p.Img)
+                .productRow__item-info 
+                    p.productRow__item-name=p.Name
+                    p.productRow__item-price #{p.Price}
+                        span đ
+                    p.productRow__item-content=p.Content
+                    .productRow__item-btn 
+                        button add to cart
+                        p 
+                            i.fas.fa-heart
+                            span Yêu thích 
+                        p 
+                            i.fas.fa-signal
+                            span So sánh 

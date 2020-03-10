@@ -1,0 +1,45 @@
+input(type="checkbox" id="modalEmail")
+.modal
+    .modal__content 
+        button.modal__close 
+            label(for="modalEmail") x
+        .modal__content-img 
+            img(src="../img/modal.png")
+        .modal__content-email
+            p.modal__content-title Gửi Email
+            p.modal__content-text 
+                span Đăng ký Email ngay hôm nay để nhận được thông tin về các sự kiện,
+                span các chương trình giảm giá của chúng tôi sớm nhất 
+            .modal__content-btn
+                input(type="text" placeholder="Email của bạn...")
+                input(type="button" value="Gửi email")
+            .modal__content-box 
+                input(type="checkbox" id="styled-checkbox-1")
+                label(for="styled-checkbox-1") Không hiển thị lại thông báo này
+.contact-menu
+    each val,index in Array(3)
+        if index==1
+            input(class="slidee" type="radio" name="slide" id="slide"+(index+1) checked)
+        else
+            input(class="slidee" type="radio" name="slide" id="slide"+(index+1) )
+        img(src="../img/slide-"+(index+1)+".jpg")
+    .container.-letter
+        .contact-menu__button-slide 
+            button
+                label(for="slide1") 
+            button(autofocus)
+                label(for="slide2")  
+            button
+                label(for="slide3") 
+    p.contact-menu__name Rượu
+    p.contact-menu__sub Vang Đỏ
+    p.contact-menu__time Since 1980
+    .container.-sub
+        +loadMenuSub(subMenu)
+header.header 
+    .container
+        .header__menu
+            +brand()
+            +loadMenu(menu,redWine)
+            button.header__menu-btn 
+                i.fas.fa-bars
