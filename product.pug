@@ -1,0 +1,54 @@
+extends pug/layout
+block css
+    link(href="./css/product.css" rel="stylesheet")
+    block cssProduct
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / Sản Phảm / 
+                span Rựu vang đỏ 
+            .poster__img
+                img(src="./img/slide-3.jpg")
+    section.product 
+        .container
+            .product__option 
+                .product__select
+                    p.product__title danh mục sản phẩm
+                    .product__icon
+                        img(src="./img/titleleft-dark.png")
+                    +loadProductOption(totalRedWine)
+                .product__compare
+                    p.product__title so sánh sản phẩm
+                    .product__icon
+                        img(src="./img/titleleft-dark.png")
+                    p.product__compare-content Bạn chưa có sản phẩm nào để so sánh
+                .product__tag
+                    p.product__title tag sản phẩm
+                    .product__icon
+                        img(src="./img/titleleft-dark.png")
+                    .product__tag-list
+                        each ta in tag
+                            p.product__tag-item 
+                                each t in ta
+                                    span=t
+                .product__advertisement
+                    .product__advertisement-img 
+                        img(src="img/lf-1.jpg")
+                        img.product__advertisement-under(src="./img/bg-4.jpg")
+                        .product__advertisement-name rươu vang 
+                        .product__advertisement-type Đỏ
+                        .product__advertisement-time 1980
+            .product__display 
+                .product__box 
+                    .product__box-icon 
+                        i.fas.fa-th
+                        i.fas.fa-list
+                    .product__box-number 
+                        span 
+                            i.fas.fa-caret-left 
+                        each n,index in Array(5)
+                            span=index+1
+                        span 
+                            i.fas.fa-caret-right    
+                .product__display-list 
+                    block productList

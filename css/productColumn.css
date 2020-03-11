@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+.newproduct {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}
+.newproduct__item {
+  background-color: #ffffff;
+}
+.newproduct__item:hover .newproduct__img-sub {
+  opacity: 1;
+}
+.newproduct__item:hover .newproduct__img-type {
+  opacity: 1;
+}
+.newproduct__item:hover .newproduct__info-name {
+  color: #e6ae48;
+}
+.newproduct__item:hover .newproduct__info-btn {
+  background-color: #e6ae48;
+}
+.newproduct__img {
+  position: relative;
+  width: 100%;
+  height: 327px;
+  padding: 30px 68px;
+  overflow: hidden;
+}
+.newproduct__img img {
+  object-fit: contain;
+}
+.newproduct__img-sub {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #959595;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.newproduct__img-sub .fa-heart {
+  color: #ffffff;
+}
+.newproduct__img-sub-item {
+  padding: 5px 10px;
+}
+.newproduct__img-sub-item i {
+  margin-right: 8px;
+}
+.newproduct__img-sub-item:nth-child(2) {
+  border-left: 0.1px solid #262626;
+  border-right: 0.1px solid #262626;
+}
+.newproduct__img-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.6rem;
+  color: #ffffff;
+  padding-bottom: 5px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  text-transform: capitalize;
+  transform: rotate(-45deg) translate(-18%, -82%);
+}
+.newproduct__img-type p {
+  padding: 30px 50px 5px 50px;
+}
+.newproduct__img-type.-sale {
+  border-bottom: 1px solid #e6ae48;
+}
+.newproduct__img-type.-sale p {
+  background-color: #e6ae48;
+}
+.newproduct__img-type.-hot {
+  border-bottom: 1px solid #ed301c;
+}
+.newproduct__img-type.-hot p {
+  background-color: #ed301c;
+}
+.newproduct__img-type.-moi {
+  border-bottom: 1px solid #62af26;
+}
+.newproduct__img-type.-moi p {
+  background-color: #62af26;
+}
+.newproduct__info {
+  margin-top: 23px;
+  font-size: 1.4rem;
+}
+.newproduct__info-name {
+  text-transform: uppercase;
+}
+.newproduct__info-price {
+  margin-top: 10px;
+  color: #959595;
+}
+.newproduct__info-price span:nth-child(1) {
+  position: relative;
+  font-size: 2.1rem;
+  color: #e6ae48;
+  margin-right: 15px;
+}
+.newproduct__info-price span:nth-child(1) small {
+  position: absolute;
+  font-size: 1.6rem;
+  top: 0;
+  left: 103%;
+}
+.newproduct__info-price span:nth-child(2) {
+  margin-right: 5px;
+}
+.newproduct__info-price del {
+  position: relative;
+}
+.newproduct__info-price del small {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 0;
+  left: 103%;
+}
+.newproduct__info-btn {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  background-color: #000000;
+  color: #ffffff;
+  border: initial;
+}
+
+.newproduct {
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 60px;
+}
+
+@media all and (max-width: 992px) {
+  .newproduct {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 60px;
+  }
+}
+@media all and (max-width: 768px) {
+  .newproduct {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 60px;
+  }
+}
+
+/*# sourceMappingURL=productColumn.css.map */

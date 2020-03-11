@@ -1,0 +1,19 @@
+@use 'mixin' as mx;
+@import "./variable";
+@include mx.setProduct();
+.newproduct{
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: $px60;
+}
+@media all and (max-width:$breakpoint-lg){
+    .newproduct{
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: $px60;
+    }
+}
+@media all and (max-width:$breakpoint-md){
+    .newproduct{
+    grid-template-columns: repeat(1,1fr);
+    grid-row-gap: $px60;
+    }
+}

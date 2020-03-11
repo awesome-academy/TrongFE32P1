@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+.poster {
+  padding-top: 32px;
+}
+.poster__title {
+  font-size: 1.4rem;
+  color: #959595;
+  margin-bottom: 37px;
+}
+.poster__title span {
+  color: #e6ae48;
+}
+
+.poster__img {
+  height: 41.55vh;
+}
+
+.product {
+  padding-top: 40px;
+}
+.product .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}
+.product__option {
+  font-size: 1.4rem;
+  color: #818181;
+  line-height: 1.6;
+}
+.product__list {
+  margin-top: 25px;
+}
+.product__list li {
+  transition: all 0.7s ease;
+}
+.product__list li:hover {
+  color: #e6ae48;
+  list-style: initial;
+  transform: translateX(15px);
+}
+.product__title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+  color: #000000;
+}
+.product__icon {
+  width: 64px;
+  height: 10px;
+  margin-top: 5px;
+}
+.product__icon img {
+  object-fit: scale-down;
+}
+.product__compare {
+  margin-top: 38px;
+}
+.product__compare-content {
+  margin-top: 20px;
+  font-size: 1.3rem;
+}
+.product__tag {
+  margin-top: 40px;
+}
+.product__tag-list {
+  margin-top: 30px;
+}
+.product__tag-item {
+  margin-top: 15px;
+}
+.product__tag-item span {
+  padding: 5px 8px;
+  border: 1px solid #e7e7e7;
+}
+.product__tag-item span:nth-child(n+2) {
+  margin-left: 5px;
+}
+.product__tag-item span:hover {
+  color: #ffffff;
+  background-color: #e6ae48;
+  border: 1px solid #e6ae48;
+}
+.product__advertisement {
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+.product__advertisement-img {
+  position: relative;
+  height: 74.65vh;
+  width: 17.12vw;
+  overflow: hidden;
+}
+.product__advertisement-under {
+  height: 27vh;
+  width: 100%;
+  position: absolute;
+  top: 28%;
+  left: 0;
+}
+.product__advertisement-name {
+  font-size: 34px;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+.product__advertisement-type {
+  font-size: 105px;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-63%);
+  top: 35%;
+  text-transform: uppercase;
+}
+.product__advertisement-time {
+  font-size: 17.58px;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(135%);
+  top: 41%;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+.product__display {
+  grid-column: 2/5;
+  text-align: center;
+}
+.product__display-list {
+  margin-top: 50px;
+}
+.product__box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  padding: 10px 0;
+  border: 1px solid #e7e7e7;
+  color: #959595;
+}
+.product__box-icon i {
+  margin-left: 20px;
+}
+.product__box-icon i:nth-child(1) {
+  color: #e6ae48;
+}
+.product__box-number {
+  margin-right: 20px;
+}
+.product__box-number span {
+  margin-left: 3px;
+}
+.product__box-number span:nth-child(1) {
+  margin-right: 10px;
+}
+.product__box-number span:nth-child(7) {
+  margin-left: 8px;
+}
+.product__box-number span:hover {
+  color: #e6ae48;
+}
+
+/*# sourceMappingURL=product.css.map */
