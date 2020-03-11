@@ -1,0 +1,266 @@
+@use 'mixin' as mx;
+@import 'variable';
+@include mx.setPoster();
+@include mx.setPoster1();
+.poster{
+        &__title{
+            margin-bottom: $px25;
+        }
+}
+.blog{
+    padding-bottom: $px123;
+    .container{
+        display: flex;
+    }
+    &__newpost{
+        margin-right: $px30;
+        &-title{
+            font-size: $r-1-8;
+            text-transform: uppercase;
+            margin-bottom: $px37;
+            font-family: $sub-font;
+            &:nth-child(n+3){
+                margin-top: $px40;
+            }
+        }
+
+        &-tag{
+            font-size: $r-1-2;
+            font-family: $sub-font;
+            color: $color-smokegrey;
+            margin-top: $px20;
+
+            span{
+                padding: $px5 $px10;
+                background-color: $color-border;
+                border-radius: $px5;
+                &:nth-child(n+2){
+                    margin-left: $px10;
+                }
+                &:hover{
+                    background-color: $color-orange;
+                    color: $color-white;
+                }
+            }
+        }
+        &-video{
+            position: relative;
+            img{
+                width: 263px;
+                height: 182px;
+            }
+            span{
+                position: absolute;
+                color: $color-white;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: $r-1-5;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.5);
+                height: $px45;
+                width: $px45;
+                text-align: center;
+                i{
+                    &::before{
+                        display: block;
+                        margin-top: $px17;
+                        margin-left: $px4;
+                    }
+                }
+            }
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: $px25;
+    }
+    &__it{
+        display: flex;
+        &-img{
+            margin-right: $px15;
+            img{
+                width: $px97;
+                height: $px80;
+            }
+            
+        }
+        &-content{
+            width: $px165;
+        }
+        &-name{
+            font-size: $r-1-3;
+            font-family: $sub-font;
+            text-transform: uppercase;
+        }
+        &-time{
+            color: $color-gray;
+            font-size: $r-1-4;
+            font-family: $sub-font;
+            margin-top: $px10;
+            span{
+                margin-left: $px10;
+            }
+        }
+    }
+    &__item{
+        text-align: left;
+
+        &-img{
+            height: 517px;
+            width: 847px;
+            overflow: hidden;
+            
+
+        }
+        &-name{
+            font-size: $r-3;
+            text-transform: uppercase;
+            margin-top: $px47;
+            margin-bottom: $px30;
+            letter-spacing: $px1;
+        }
+        &-sub{
+            opacity: .5;
+            font-size: $r-2-1;
+            
+        }
+        &-author{
+            padding-right: $px5;
+            border-right: $px0-5 solid $color-gray;
+        }
+        &-time{
+            padding: 0 $px5;
+            border-right: .5px solid $color-gray;
+        }
+        &-comment{
+            margin-left: $px5;
+
+        }
+        &-content{
+            margin-top: $px25;
+            font-size: $r-1-9;
+            color: $color-smokegrey;
+            line-height: 150%;
+            font-style: italic;
+        }
+        &-btn{
+            display: block;
+            font-size: $r-1-4;
+            margin-top: $px7;
+            opacity: .7;
+            color: $color-gray;
+        }
+    }
+    &__content{
+        &-title{
+            margin-top: $px56;
+            margin-bottom: $px27;
+            text-transform: uppercase;
+            font-size: $r-1-8;
+            font-style: italic;
+            &.-bl{
+                font-style: normal;
+            }
+        }
+        @include mx.setForm();
+        &-pagination{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                font-size: $px14;
+                border: $px1 solid $color-border;
+                background-color: initial;
+                padding: $px13 $px17;
+                &:nth-child(1),&:nth-child(5){
+                    color: $color-white;
+                    background-color: $color-black;
+                }
+                &:nth-child(2){
+                    background-color: $color-darkgrey;
+                    color: $color-white;
+                }
+                &:nth-child(-n+4){
+                    margin-right: $px15;
+                }
+                &:hover{
+                    background-color: $color-darkgrey;
+                    color: $color-white;
+                }
+
+            }
+        }
+    }
+    &__comment{
+        padding-bottom: $px40;
+        &-box{
+            display: flex;
+            justify-content: space-between;
+            padding: $px15 $px20;
+            background-color: $color-border2;
+            border-radius: $px5;
+            width: 847px;
+            p{
+                font-size: 1.415rem;
+                font-style: italic;
+                span{
+                    &:nth-child(1)
+                    {
+                        padding-right: $px30;
+                        border-right: $px1-5 solid $color-border3;
+                    }
+                    &:nth-child(2)
+                    {
+                        padding-left: $px15;
+                        border-right: $px1-5 solid $color-border3;
+                    }
+                }
+            }
+            button{
+                font-size: $r-1-3;
+                border: none;
+                background-color: initial;
+                border-bottom: $px1 solid $color-black;
+                font-style: italic;
+                font-weight: initial;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        &>p{
+            color: $color-gray;
+            font-size: $r-1-4;
+            line-height: 150%;
+            padding: $px15 0 0 $px20 ;
+            
+            
+        }
+    }
+}
+
+@media all and (max-width:$breakpoint-2xl){
+    .blog{
+        &__item{
+            &-img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__content{
+            form{
+                input,textarea{
+                    width: 100%;
+
+                }
+            }
+        }
+        &__comment{
+            &-box{
+                width: 100%;
+            }
+        }
+    }
+}

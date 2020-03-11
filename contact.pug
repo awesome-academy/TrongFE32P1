@@ -1,0 +1,46 @@
+extends pug/layout
+block css
+    link(href="./css/contact.css" rel="stylesheet")
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / 
+                span Địa chỉ
+            p.poster__name liên hệ 
+            img(src="img/titleleft-dark.png")
+    section.contact 
+        .container 
+            .contact__img 
+                img(src="./img/map.png")
+            .contact__info
+                +brand()
+                p 
+                    i.fas.fa-map-marker-alt
+                    span Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội
+                    span.contact__info-break Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+                p
+                    i.fas.fa-phone-alt
+                    span (04) 6674 2332 
+                p
+                    i.fas.fa-envelope
+                    span Support@bizweb.vn
+                p.contact__info-follow follow us:
+                .contact__info-social 
+                    i.fab.fa-facebook-f 
+                    i.fab.fa-google-plus-g
+                    i.fab.fa-twitter
+                    i.fab.fa-youtube
+                    i.fab.fa-pinterest-square
+                    i.fab.fa-vk
+    section.message
+        .container
+            .message__btn 
+                each m in messageList
+                    .message__item
+                        p=m 
+                        input(type="text")
+                .message__item
+                    p your message 
+                    textarea
+                .message__item
+                    button gửi

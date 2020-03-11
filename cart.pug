@@ -1,0 +1,38 @@
+extends pug/layout
+block css
+    link(href="./css/cart.css" rel="stylesheet")
+    block cssProduct
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / Sản Phảm / 
+                span Giỏ Hàng
+            p.poster__name Giỏ Hàng 
+            img(src="img/titleleft-dark.png")
+    section.cart 
+        .container 
+            table
+                each ca,name in cart
+                    if name == "name"
+                        tr 
+                            each c in ca 
+                                th=c
+                    else
+                        each n in Array(4)
+                            tr
+                                each c,index in ca 
+                                    if  index == 0 
+                                        td 
+                                            img(src=c)
+                                    else if index == 2 || index ==4
+                                        td 
+                                            p #{c}
+                                                span đ
+                                    else
+                                        td=c 
+                                td
+                                    i.fas.fa-trash-alt
+            .cart__btn 
+                button.cart__btn-countinue tiếp tục mua hàng 
+                button.cart__btn-delete xóa 
+                button.cart__btn-update  cập nhật                    

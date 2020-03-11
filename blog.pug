@@ -1,0 +1,15 @@
+extends pug/layout
+block css
+    link(href="./css/blog.css" rel="stylesheet")
+    block cssProduct
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / 
+                span Blog
+            p.poster__name Blog 
+            img(src="img/titleleft-dark.png")
+    section.blog
+        .container
+            .blog__list
+                +loadBlog(allBlog)

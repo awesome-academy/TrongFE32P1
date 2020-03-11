@@ -1,0 +1,47 @@
+@use 'mixin' as mx;
+@import 'variable';
+@include mx.setPoster();
+@include mx.setPoster1();
+.poster{
+        &__title{
+            margin-bottom: $px25;
+        }
+}
+.blog{
+    padding: $px30 0 $px95 0;
+    @include mx.setBlogs();
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: $px30;
+        grid-row-gap: $px40;
+        margin-top: $px10;
+    }
+    & &__item{
+        &-btn{
+            color: $color-gold;
+        }
+        &-content{
+            width: $px320;
+        }
+    }
+}
+@media all and (max-width:$breakpoint-xl){
+    .blog{
+        &__list{
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+        & &__item{
+            margin: 0 auto;
+        }
+    }
+}
+@media all and (max-width:$breakpoint-md){
+    .blog{
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+            
+        }
+    }
+}

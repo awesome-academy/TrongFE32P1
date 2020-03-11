@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+.poster {
+  padding-top: 32px;
+}
+.poster__title {
+  font-size: 1.4rem;
+  color: #959595;
+  margin-bottom: 37px;
+}
+.poster__title span {
+  color: #e6ae48;
+}
+
+.poster__title {
+  margin-bottom: 10px;
+}
+.poster__name {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.poster img {
+  width: 65px;
+  height: 10px;
+  object-fit: scale-down;
+  margin-top: 5px;
+}
+
+.poster__title {
+  margin-bottom: 25px;
+}
+
+.contact {
+  padding-top: 28px;
+}
+.contact .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 26px;
+}
+.contact__img {
+  width: 48.82vw;
+  height: 55.4vh;
+}
+.contact__img img {
+  object-position: left top;
+}
+.contact__info > p {
+  font-size: 1.4rem;
+  color: #666666;
+  margin-top: 18px;
+}
+.contact__info i {
+  width: 19px;
+}
+.contact__info span {
+  margin-left: 7px;
+}
+.contact__info .contact__info-break {
+  display: block;
+  margin-left: 27px;
+  margin-top: 4px;
+}
+.contact__info .contact__info-follow {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-top: 37px;
+}
+.contact__info-social {
+  margin-top: 16px;
+  font-size: 1.6rem;
+  color: #666666;
+}
+.contact__info-social i:nth-child(n+2) {
+  margin-left: 16px;
+}
+
+.message {
+  padding-top: 40px;
+  padding-bottom: 120px;
+}
+.message__btn:nth-child(4) p {
+  transform: translateY(-200%);
+}
+.message__item {
+  display: flex;
+  align-items: center;
+  width: 48.82vw;
+  margin-top: 20px;
+}
+.message__item:nth-child(4) p {
+  transform: translateY(-410%);
+}
+.message p {
+  font-size: 1.4rem;
+  color: #666666;
+  text-transform: capitalize;
+  width: 13.66%;
+}
+.message input {
+  height: 34px;
+}
+.message textarea {
+  height: 160px;
+}
+.message input, .message textarea {
+  background-color: #fafafa;
+  border: 1px solid #e7e7e7;
+  width: 86.34%;
+}
+.message button {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 10px 27px;
+  border: none;
+  margin-left: 13.7%;
+  margin-top: 10px;
+}
+.message button:hover {
+  background-color: #e6ae48;
+}
+
+@media all and (max-width: 1300px) {
+  .contact .container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 40px;
+  }
+  .contact__img {
+    width: 100%;
+  }
+
+  .message__item {
+    width: 80%;
+  }
+}
+@media all and (max-width: 1300px) {
+  .message__item {
+    width: 100%;
+  }
+}
+@media all and (max-width: 605px) {
+  .message__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .message__item p {
+    margin-bottom: 10px;
+  }
+  .message__item:nth-child(4) p {
+    transform: initial;
+  }
+  .message button {
+    margin-left: initial;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

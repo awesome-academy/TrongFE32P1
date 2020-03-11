@@ -1,0 +1,49 @@
+extends pug/layout
+block css
+    link(href="./css/address.css" rel="stylesheet")
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / 
+                span Địa chỉ
+            p.poster__name địa chỉ 
+            img(src="img/titleleft-dark.png")
+    section.address
+        .container
+            each n,index in Array(2)
+                .address__box 
+                    .address__item 
+                        if index == 0
+                            p.address__item-title Địa chỉ của bạn
+                        else
+                            a.address__item-title.-link(href="#") Thêm địa chỉ
+                        .address__input
+                            each a,title in address
+                                if index == 1 && (title == "Thành phố" || title == "Quốc tịch")
+                                    p=title
+                                    select
+                                        option=a
+                                else
+                                    p=title 
+                                    input(type="text" value=a)
+                            .address__input-checkbox
+                                input(type="checkbox")
+                                label Đặt làm địa chỉ mặc định
+                            if index == 0 
+                                .address__button
+                                    button.address__button-btn Chỉnh sửa địa chỉ
+                                    button.address__button-btn.-dark Xóa
+                            else
+                                .address__button
+                                    button.address__button-btn Cập nhật địa chỉ
+                                    button.address__button-btn.-dark Thoát
+    section.info
+        .container
+            each n,index in Array(2)
+                .info__box 
+                    .info__item 
+                            each a,title in address
+                                p 
+                                    span.info__item-title=title
+                                    span.info__item-value=a
+                            a(href="#") Chỉnh sửa địa chỉ
