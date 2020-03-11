@@ -1,0 +1,73 @@
+extends pug/layout
+block css
+    link(href="./css/blogDetail.css" rel="stylesheet")
+    block cssProduct
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / 
+                span Blog
+            p.poster__name Blog 
+            img(src="img/titleleft-dark.png")
+    section.blog
+        .container 
+            .blog__newpost
+                p.blog__newpost-title bài viết mới nhất 
+                .blog__list 
+                    each b in newPost
+                        .blog__it 
+                            .blog__it-img 
+                                img(src=b.Img)
+                            .blog__it-content 
+                                p.blog__it-name=b.Name
+                                p.blog__it-time   
+                                    i.far.fa-calendar
+                                    span=b.Time
+                p.blog__newpost-title blog tags
+                each ta in tag
+                    p.blog__newpost-tag 
+                        each t in ta
+                            span=t
+                p.blog__newpost-title lastest video 
+                p.blog__newpost-video 
+                    img(src="./img/np-4.png")
+                    span 
+                        i.fas.fa-play
+            .blog__content
+                .blog__item
+                    .blog__item-img 
+                        img(src=blogDetail.Img)
+                    p.blog__item-name= blogDetail.Name 
+                    .blog__item-sub 
+                        span.blog__item-author Đăng bởi #{blogDetail.Author}
+                        span.blog__item-time=blogDetail.Time
+                        span.blog__item-comment #{blogDetail.Comment} bình luận 
+                    p.blog__item-content=blogDetail.Content 
+                p.blog__content-title Đóng góp ý kiến
+                form(action="")
+                    label(for="input1") Tên 
+                        span *
+                    input(type="text" id="input1")
+                    label(for="input2") Email 
+                        span *
+                    input(type="text" id="input2")
+                    label(for="input3") Ý kiến 
+                        span *
+                    textarea( id="input3")
+                    input(type="button" value="Gửi ý kiến") 
+                p.blog__content-title.-bl Bình luận (3)
+                each c in comment
+                    .blog__comment 
+                        .blog__comment-box 
+                            p 
+                                span=c.Name
+                                span=c.Time 
+                            button Trả lời
+                        p=c.Content
+                .blog__content-pagination 
+                    button 
+                        i.fas.fa-chevron-left
+                    each n,index in Array(3)
+                        button=index+1
+                    button 
+                        i.fas.fa-chevron-right

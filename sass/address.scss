@@ -1,0 +1,131 @@
+@use 'mixin' as mx;
+@import 'variable';
+@include mx.setPoster();
+@include mx.setPoster1();
+.address{
+    padding: 22px 0 32px 0;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: $px30;
+    }
+    &__input{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(8,1fr);
+        align-items: center;
+        grid-row-gap: $px15;
+        grid-column-gap: $px10;
+        
+        p{
+            font-size: $r-1-6;   
+            white-space: nowrap;
+            
+        }
+        input,select{
+            width: 437px;    
+            padding: $px10 $px20;
+            font-size: $r-1-6;
+            border: $px1 solid $color-border;
+        }
+        &-checkbox{
+            grid-column: 2/3;
+            input{
+                width: initial;
+            }
+            label{
+                font-size: $px16;
+                margin-left: $px15;
+                color: $color-gray;
+            }
+        }
+    }
+    &__item{
+        &-title{
+            font-size: $r-1-8;
+            text-transform: uppercase;
+            margin-bottom: $px30;
+            &.-link{
+                text-transform: initial;
+                color: $color-twitter;
+                border-bottom: 1px solid $color-twitter;
+                display: inline-block;
+            }
+        }
+    }
+    &__button{
+        grid-column: 2/3;
+        &-btn{
+            font-size: 1.598rem;
+            padding: $px7 $px20;
+            border: none;
+            background-color: $color-twitter;
+            color: $color-special1;
+            &.-dark{
+                background-color: $color-black;
+                margin-left: $px14;
+            }
+        }
+    }
+}
+.info{
+    font-size: $r-1-6;
+    padding-bottom: $px70;
+    &__box{
+        padding: $px30 0;
+        border-top: $px1 solid $color-border;
+
+    }
+    
+    &__item{
+        &-title{
+            width: $px105;
+            display: inline-block;
+        }
+        &-value{
+            margin-left: $px36;
+        }
+        p{
+            &:nth-child(n+2){
+                margin-top: $px34;
+            }
+        }
+        a{
+            display: inline-block;
+            margin-left: 420px;
+            margin-top: $px26;
+            color: $color-twitter;
+            border-bottom: $px1 solid $color-twitter;
+        }
+    }
+}
+@media all and (max-width:$breakpoint-2xl){
+    .address{
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            grid-row-gap: $px30;
+            
+        }
+        &__input{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            input,select{
+                margin: $px20 0 $px40 0;
+                width: 100%;
+            }
+            &-checkbox{
+                display: flex;
+                margin: initial;
+                align-items: center;
+                input{
+                    width: initial;
+                }
+                label{
+                    white-space: nowrap;
+                    transform: translateY(-63%);
+                }
+            }
+        }
+    }
+}
