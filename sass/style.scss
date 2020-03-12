@@ -49,7 +49,7 @@
                         font-family: 'Times New Roman';
                         letter-spacing: initial;
                         justify-content: space-between;
-                        z-index: 110;
+                        z-index: 160;
                         display: none;
                         p{
                             white-space: nowrap;
@@ -255,9 +255,9 @@ footer{
                             content: "";
                             width: 0;
                             height: 0;
-                            border-top: $px14-4 solid transparent;
+                            border-top: $px14 solid transparent;
                             border-left: $px18 solid $color-dark;
-                            border-bottom: $px14-4 solid transparent;
+                            border-bottom: $px14 solid transparent;
                             top: 50%;
                             left: 100%;
                             margin-top: -14.7px;
