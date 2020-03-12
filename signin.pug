@@ -1,0 +1,29 @@
+extends pug/layout
+block css
+    link(href="./css/signin.css" rel="stylesheet")
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / 
+                span Đăng nhập
+            .poster__btn
+                p.poster__name đăng nhập
+                a(href="#") Đăng ký
+            img(src="img/titleleft-dark.png")
+    section.signin 
+        .container 
+            .signin__box 
+                form 
+                    p.signin__box-title khách hàng đăng nhập
+                    p.signin__box-title.-sub Nếu bạn có một tài khoản, xin vui lòng đăng nhập
+                    .signin__box-input 
+                        p Email *
+                        input(type="text")
+                    .signin__box-input 
+                        p Password *
+                        input(type="text")
+                    .signin__box-input.-check 
+                        input(type="checkbox")
+                        label Quên mật khẩu
+                    .signin__box-send
+                        button Đăng nhập
