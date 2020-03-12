@@ -116,7 +116,7 @@ button:focus {
   font-family: "Times New Roman";
   letter-spacing: initial;
   justify-content: space-between;
-  z-index: 110;
+  z-index: 160;
   display: none;
 }
 .header__menu .menu__description p {
@@ -308,9 +308,9 @@ footer .contact-us__item-send button:before {
   content: "";
   width: 0;
   height: 0;
-  border-top: 14.4px solid transparent;
+  border-top: 14px solid transparent;
   border-left: 18px solid #252525;
-  border-bottom: 14.4px solid transparent;
+  border-bottom: 14px solid transparent;
   top: 50%;
   left: 100%;
   margin-top: -14.7px;

@@ -64,8 +64,10 @@
 }
 .contact-menu .container.-letter {
   position: absolute;
-  top: 0;
+  top: 90%;
   left: 0;
+  display: block;
+  height: auto;
 }
 .contact-menu .slidee:checked + img {
   display: block;
@@ -74,7 +76,7 @@
 .contact-menu__button-slide {
   position: absolute;
   left: 50%;
-  bottom: 3%;
+  bottom: 0%;
   transform: translateX(-50%);
   z-index: 9999;
 }
