@@ -1,0 +1,34 @@
+extends pug/layout
+block css
+    link(href="./css/signup.css" rel="stylesheet")
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / 
+                span Đăng ký
+            .poster__btn
+                p.poster__name đăng ký
+                a(href="#") Đăng nhập
+            img(src="img/titleleft-dark.png")
+    section.signup 
+        .container 
+            .signup__box 
+                form 
+                    p.signup__box-title Thông tin cá nhân
+                    each f in formSign
+                        .signup__box-input 
+                            p=f
+                            input(type="text")
+                    .signup__box-input.-check 
+                        input(type="checkbox")
+                        label Đăng ký nhận bản tin
+                    p.signup__box-title Thông tin đăng nhập
+                    .signup__box-input.-confir 
+                        p Mật khẩu *
+                        input(type="text")
+                    .signup__box-input.-confir 
+                        p Xác nhận mật khẩu *
+                        input(type="text")
+                    .signup__box-send
+                        button gửi
+                        button quay lại
