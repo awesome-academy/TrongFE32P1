@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(href="fontawesome/css/all.min.css" rel="stylesheet")
+        link(href="./css/error.css", rel="stylesheet")
+    body
+        section.error
+            .error__box
+                .error__box-img 
+                    img(src="img/error.png")
+                .error__box-number 
+                    img(src="img/error-2.png")
+                p.error__box-text Lỗi 
+                p.error__box-sub Đây không phải là
+                p.error__box-title trang web bạn đang tìm kiếm
+        section.recommend
+            .recommend__box
+                .recommend__box-img
+                    img(src="./img/error-brand.PNG")
+                p 
+                    a(href="#") trang chủ
+                    i.fas.fa-caret-right
+                p 
+                    a(href="#") liên hệ
+                    i.fas.fa-caret-right
+                .recommend__box-btn
+                    input(type="text")
+                    i.fas.fa-search

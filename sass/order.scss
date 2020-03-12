@@ -1,0 +1,157 @@
+@use 'mixin' as mx;
+@import 'variable';
+@include mx.setPoster();
+@include mx.setPoster1();
+.poster{
+        &__title{
+            margin-bottom: $px25;
+        }
+}
+.order{
+    padding-top: $px34;
+    padding-bottom: $px90;
+    .container{
+        display: flex;
+    }
+    &__box{
+        margin-right: $px30;
+        table{
+            border-collapse: collapse;
+            border: $px1 solid $color-border;
+            text-transform: uppercase;
+            width: 100%;
+            tr{
+                font-size: $r-1-4;
+                text-align: center;
+                td{
+                    padding: $px15 $px15;
+                    white-space: nowrap;
+                }
+                &:nth-child(1){
+                    font-size: $r-1-2;
+                    td{
+                        border-bottom: $px1 solid $color-border;
+                    }
+                }
+                &:nth-child(n+2){
+                    td{
+                        &:nth-child(2){
+                            text-align: left;
+                            span{
+                                display: block;
+                                color: $color-gray;
+                                margin-top: $px5;
+                                
+                            }
+                        }
+                        &:nth-child(5){
+                            text-transform: initial;
+                        }
+                    }
+                }
+                &:nth-child(-n+6){
+                    td{
+                        border-right: $px1 solid $color-border;
+                    }
+                }
+                
+                
+            }
+            
+        }
+        
+    }
+    &__list{
+        width: 843px;
+        padding: $px32 $px43 $px32 $px27;
+        background-color: $color-secondary;
+        border: $px1 solid $color-border;
+        border-bottom: initial;
+        &-name{
+            font-size: $r-1-6;
+            text-transform: uppercase;
+        }
+        &-text{
+            font-size: $r-1-4;
+            margin-top:$px22;
+            span{
+                padding: 0 $px12;
+                border-right: $px1 solid $color-black;
+                &:nth-child(1){
+                    padding: 0 $px12 0 0;
+                }
+                &:nth-child(6){
+                    padding: 0 0 0 $px12;
+                    border-right: initial;
+                }
+                &:nth-child(8){
+                    padding-left: 0;
+                }
+                &:nth-child(n+8)
+                {
+                    display: inline-block;
+                    margin-top: $px10;
+                }
+            }
+            
+        }
+        &-hilight{
+            border-right: initial;
+        }
+    }
+    &__info{
+        padding: $px30 $px36 $px30 $px20;
+        background-color: $color-secondary;
+        border: $px1 solid $color-border;
+        font-size: $r-1-4;
+        width: $px262;
+        height: $px270;
+        &-title{
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin-bottom: $px21;
+            font-size: $r-1-6;
+        }
+        &-sub{
+            display: block;
+        }
+        p{
+            &:nth-child(n+2){
+                margin-top: $px14;
+            }
+            
+        }
+        &-name{
+            
+            &.-main{
+                font-size: $r-1-6;
+            }
+        }
+        &-sub{
+            margin-left: $px24;
+        }
+        a{
+            display: inline-block;
+            margin-top: $px40;
+            color: $color-black;
+            border-bottom: $px1 solid $color-black;
+        }
+        i{
+            width: $px24;
+        }
+    }
+}
+@media all and (max-width:$breakpoint-2xl){
+    .order{
+        .container{
+            flex-direction: column;
+        }
+        &__list{
+            width: 100%;
+            margin-right: initial;
+        }
+        &__info{
+            margin-top: $px30;
+        }
+    }
+}

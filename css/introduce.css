@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UTM";
+  src: url("../font/UTMAlpineKT.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/UTMAlpineKT.woff") format("woff"), url("../font/UTMAlpineKT.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "UTMAquare";
+  src: url("../font/UTMAquarelle.eot");
+  src: url("../font/UTMAquarelle.woff") format("woff"), url("../font/UTMAquarelle.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/LobsterTwo.eot");
+  src: url("../font/LobsterTwo.woff") format("woff"), url("../font/LobsterTwo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UVFAphrodite";
+  src: url("../font/UVFAphroditePro.eot");
+  src: url("../font/UVFAphroditePro.woff") format("woff"), url("../font/UVFAphroditePro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("../font/BlendaScript.eot");
+  src: url("../font/BlendaScript.woff") format("woff"), url("../font/BlendaScript.ttf") format("truetype");
+}
+.poster {
+  padding-top: 32px;
+}
+.poster__title {
+  font-size: 1.4rem;
+  color: #959595;
+  margin-bottom: 37px;
+}
+.poster__title span {
+  color: #e6ae48;
+}
+
+.poster__title {
+  margin-bottom: 10px;
+}
+.poster__name {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.poster img {
+  width: 65px;
+  height: 10px;
+  object-fit: scale-down;
+  margin-top: 5px;
+}
+
+.poster__title {
+  margin-bottom: 25px;
+}
+
+.introduce {
+  padding: 30px 0 120px 0;
+}
+.introduce .container {
+  display: flex;
+}
+.introduce__img {
+  margin-right: 30px;
+}
+.introduce__img img {
+  width: 458px;
+  height: 308px;
+}
+.introduce__content-name {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+}
+.introduce__content-text {
+  font-size: 1.4rem;
+  color: #959595;
+  width: 548px;
+  margin-top: 15px;
+}
+.introduce__content-text span {
+  display: block;
+  line-height: 150%;
+}
+
+@media all and (max-width: 1300px) {
+  .introduce .container {
+    flex-direction: column;
+  }
+  .introduce__img {
+    margin-right: initial;
+  }
+  .introduce__img img {
+    width: 100%;
+  }
+  .introduce__content {
+    margin-top: 30px;
+  }
+  .introduce__content-text {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=introduce.css.map */
