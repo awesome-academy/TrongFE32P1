@@ -1,0 +1,52 @@
+extends pug/layout
+block css
+    link(href="./css/order.css" rel="stylesheet")
+    block cssProduct
+block content
+    section.poster 
+        .container
+            p.poster__title Trang chủ / 
+                span Danh sách đơn hàng
+            p.poster__name Đơn hàng 
+            img(src="img/titleleft-dark.png")
+    section.order
+        .container 
+            .order__box 
+                .order__list
+                    p.order__list-name Danh sách đơn hàng 
+                    .order__list-text 
+                        each n,index in listTextOrder 
+                            if index==6
+                                br
+                                span=n
+                            else
+                                span=n 
+                table 
+                    tr 
+                        each n in listTitleOrder
+                            td=n 
+                    each n in Array(6)
+                        tr
+                            each l in listOrder
+                                td=l.Stt
+                                td #{l.Day}
+                                    span=l.Time 
+                                td=l.Kho 
+                                td=l.Amount
+                                td=l.Price
+                                td=l.Status 
+                                td=l.Thao
+            .order__info 
+                p.order__info-title thông tin khách hàng
+                p 
+                    i.fas.fa-user-alt
+                    span.order__info-name.-main GiangLe
+                    span.order__info-sub Leanhgiang89@gmail.com
+                p   
+                    i.fas.fa-map-marker-alt
+                    span.order__info-name Tòa nhà Hà Nội group
+                    span.order__info-sub 442 Đội Cấn, Ba Đình Hà Nội
+                p 
+                    i.fas.fa-phone-alt 
+                    span.order__info-name (04) 3786 8904
+                a(href="#") Chi tiết địa chỉ
